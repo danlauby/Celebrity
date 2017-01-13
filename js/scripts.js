@@ -7,13 +7,16 @@ $(function() {
       var johnny = "Johnny Greenwood";
       if (age < 50 && color === 'green') {
         $('#celebrity').text(johnny);
+        $('div#answer').addClass('green');
         $('#noMatch').hide();
         $('#match').show();
       } else if (age >= 50 && color === 'blue') {
         $('#celebrity').text(tom);
+        $('div#answer').addClass('blue');
         $('#noMatch').hide();
         $('#match').show();
       } else {
+        $('div#answer').addClass('noMatch');
         $('#match').hide();
         $('#noMatch').show();
       }
